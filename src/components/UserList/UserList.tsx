@@ -26,6 +26,14 @@ const UserList: FC<UserListProps> = ({ value: users, onViewDetails }) => {
     onViewDetails(nickname);
   };
 
+  if (userList.length === 0) {
+    return (
+      <div className={styles.userList}>
+        <h2>The List Is Empty</h2>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.userList}>
       {userList.map((user) => (
