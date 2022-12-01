@@ -1,15 +1,15 @@
 import { useAppSelector } from '../../store';
 import { selectUsers } from '../../store/user/userSlice';
-import './App.css';
+import UserWidget from '../UserWidget/UserWidget';
+
+import styles from './App.module.css';
 
 function App() {
   const users = useAppSelector(selectUsers);
 
   return (
-    <div className="App">
-      {users.map((user) => (
-        <div key={user.nickname}>{user.name}</div>
-      ))}
+    <div className={styles.app}>
+      <UserWidget value={users} />
     </div>
   );
 }
