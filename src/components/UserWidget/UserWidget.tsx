@@ -17,8 +17,6 @@ const UserWidget: FC<UserWidgetProps> = ({ value: users }) => {
   const handleViewDetails = (nickname: string) => {
     const user = users.find((user) => user.nickname === nickname) || null;
 
-    console.log(user);
-
     if (user) {
       setSelectedUser(user);
       setShowDetails(true);
