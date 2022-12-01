@@ -16,7 +16,7 @@ const UserItem: FC<UserItemProps> = ({ value, onView }) => {
   };
 
   return (
-    <div className={styles.item}>
+    <div className={styles.item} data-testid="user-item">
       <div className={styles.info}>
         <img src={photo} alt="user" className={styles.image} />
         <div className={styles.group}>
@@ -24,7 +24,9 @@ const UserItem: FC<UserItemProps> = ({ value, onView }) => {
           <p className={styles.nickname}>{nickname}</p>
         </div>
       </div>
-      <button className={styles.button} onClick={handleOnView}>View</button>
+      <button className={styles.button} onClick={handleOnView}>
+        View
+      </button>
     </div>
   );
 };
